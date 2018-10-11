@@ -5,12 +5,12 @@
 //  Created by Bonilla, Sean on 10/9/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 public class ColorChangeViewController: UIViewController {
 
-    private lazy var myColor : ColorTool = ColorTool()
+    public lazy var myColor : ColorTool = ColorTool()
     
     @IBOutlet var firstButton: UIButton!
     override public func viewDidLoad() -> Void
@@ -28,6 +28,7 @@ public class ColorChangeViewController: UIViewController {
 
     @IBAction func colorClick(_ sender: UIButton) -> Void {
         self.view.backgroundColor = myColor.createRandomColor()
+        firstButton.backgroundColor = myColor.createRandomColor()
     }
     
 }
